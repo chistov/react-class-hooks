@@ -17,6 +17,5 @@ class App extends React.Component {
 }
 
 const id = document.getElementById('main')
-console.log('id: ', id);
 
 render(<App/>, id)
