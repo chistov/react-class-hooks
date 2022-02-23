@@ -14,7 +14,7 @@ interface IItem {
   value: number;
 }
 
-export class ChildWithBtn extends React.Component<IProps, IState> {
+export default class ChildWithBtn extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
@@ -36,8 +36,6 @@ export class ChildWithBtn extends React.Component<IProps, IState> {
 
   componentDidMount() {
     this.srvReq();
-    console.log('componentDidMount items: ', this.state.items);
-
     window.addEventListener('keydown', this.handleKeyDown);
   }
 
@@ -58,8 +56,8 @@ export class ChildWithBtn extends React.Component<IProps, IState> {
 
   onClick() {
     console.log('Btn clicked: ', this.state.inputValue);
-    this.setState(() => ({
-      inputValue: this.state.inputValue + 1
+    this.setState((prev) => ({
+      inputValue: prev.inputValue + 1
     }))
   }
 
