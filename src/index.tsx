@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {render} from 'react-dom'
 import {RootComponent} from './RootComponent'
-import {ChildWithBtn} from "./ChildWithBtn";
+import ChildWithBtn from "./ChildWithBtn";
 
 class App extends React.Component {
   render() {
@@ -20,3 +20,5 @@ const id = document.getElementById('main')
 console.log('id: ', id);
 
 render(<App/>, id)
+
+export default App;
